@@ -1,0 +1,186 @@
+
+;; Function main (main, funcdef_no=0, decl_uid=2248, cgraph_uid=0, symbol_order=0)
+
+(note 1 0 3 NOTE_INSN_DELETED)
+(note 3 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 3 5 2 NOTE_INSN_FUNCTION_BEG)
+(insn 5 2 6 2 (set (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 fact+0 S8 A64])
+        (const_int 1 [0x1])) "fact.c":4 81 {*movdi_internal}
+     (nil))
+(insn 6 5 7 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7f8a927eef30 *.LC0>)) "fact.c":5 81 {*movdi_internal}
+     (nil))
+(insn 7 6 8 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "fact.c":5 84 {*movqi_internal}
+     (nil))
+(call_insn 8 7 9 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f8a92743f00 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) "fact.c":5 676 {*call_value}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (nil))))
+(insn 9 8 10 2 (parallel [
+            (set (reg:DI 93)
+                (plus:DI (reg/f:DI 20 frame)
+                    (const_int -20 [0xffffffffffffffec])))
+            (clobber (reg:CC 17 flags))
+        ]) "fact.c":6 218 {*adddi_1}
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 4 si)
+        (reg:DI 93)) "fact.c":6 81 {*movdi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7f8a9283d000 *.LC1>)) "fact.c":6 81 {*movdi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "fact.c":6 84 {*movqi_internal}
+     (nil))
+(call_insn 13 12 14 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_scanf") [flags 0x41]  <function_decl 0x7f8a92744b00 scanf>) [0 __builtin_scanf S1 A8])
+            (const_int 0 [0]))) "fact.c":6 676 {*call_value}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (nil)))))
+(insn 14 13 15 2 (set (reg:SI 87 [ n.0_1 ])
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -20 [0xffffffffffffffec])) [1 n+0 S4 A32])) "fact.c":9 82 {*movsi_internal}
+     (nil))
+(insn 15 14 16 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:SI 87 [ n.0_1 ])
+            (const_int 0 [0]))) "fact.c":9 3 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 16 15 17 2 (set (pc)
+        (if_then_else (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 23)
+            (pc))) "fact.c":9 627 {*jcc_1}
+     (nil)
+ -> 23)
+(note 17 16 18 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 18 17 19 4 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x7f8a9283d090 *.LC2>)) "fact.c":10 81 {*movdi_internal}
+     (nil))
+(insn 19 18 20 4 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "fact.c":10 84 {*movqi_internal}
+     (nil))
+(call_insn 20 19 21 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f8a92743f00 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) "fact.c":10 676 {*call_value}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (nil))))
+(jump_insn 21 20 22 4 (set (pc)
+        (label_ref 49)) 659 {jump}
+     (nil)
+ -> 49)
+(barrier 22 21 23)
+(code_label 23 22 24 5 2 (nil) [1 uses])
+(note 24 23 25 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 5 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "fact.c":12 82 {*movsi_internal}
+     (nil))
+(jump_insn 26 25 27 5 (set (pc)
+        (label_ref 35)) "fact.c":12 659 {jump}
+     (nil)
+ -> 35)
+(barrier 27 26 38)
+(code_label 38 27 28 6 5 (nil) [1 uses])
+(note 28 38 29 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 29 28 30 6 (set (reg:SI 94)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "fact.c":13 82 {*movsi_internal}
+     (nil))
+(insn 30 29 31 6 (set (reg:DI 88 [ _2 ])
+        (sign_extend:DI (reg:SI 94))) "fact.c":13 145 {*extendsidi2_rex64}
+     (nil))
+(insn 31 30 32 6 (set (reg:DI 96)
+        (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 fact+0 S8 A64])) "fact.c":13 81 {*movdi_internal}
+     (nil))
+(insn 32 31 33 6 (parallel [
+            (set (reg:DI 95)
+                (mult:DI (reg:DI 96)
+                    (reg:DI 88 [ _2 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "fact.c":13 339 {*muldi3_1}
+     (nil))
+(insn 33 32 34 6 (set (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 fact+0 S8 A64])
+        (reg:DI 95)) "fact.c":13 81 {*movdi_internal}
+     (nil))
+(insn 34 33 35 6 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "fact.c":12 217 {*addsi_1}
+     (nil))
+(code_label 35 34 36 7 4 (nil) [1 uses])
+(note 36 35 37 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 37 36 39 7 (set (reg:SI 89 [ n.1_3 ])
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -20 [0xffffffffffffffec])) [1 n+0 S4 A32])) "fact.c":12 82 {*movsi_internal}
+     (nil))
+(insn 39 37 40 7 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+            (reg:SI 89 [ n.1_3 ]))) "fact.c":12 7 {*cmpsi_1}
+     (nil))
+(jump_insn 40 39 41 7 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 38)
+            (pc))) "fact.c":12 627 {*jcc_1}
+     (nil)
+ -> 38)
+(note 41 40 42 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 42 41 43 8 (set (reg:SI 90 [ n.2_4 ])
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -20 [0xffffffffffffffec])) [1 n+0 S4 A32])) "fact.c":15 82 {*movsi_internal}
+     (nil))
+(insn 43 42 44 8 (set (reg:DI 97)
+        (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 fact+0 S8 A64])) "fact.c":15 81 {*movdi_internal}
+     (nil))
+(insn 44 43 45 8 (set (reg:DI 1 dx)
+        (reg:DI 97)) "fact.c":15 81 {*movdi_internal}
+     (nil))
+(insn 45 44 46 8 (set (reg:SI 4 si)
+        (reg:SI 90 [ n.2_4 ])) "fact.c":15 82 {*movsi_internal}
+     (nil))
+(insn 46 45 47 8 (set (reg:DI 5 di)
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f8a9283d120 *.LC3>)) "fact.c":15 81 {*movdi_internal}
+     (nil))
+(insn 47 46 48 8 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "fact.c":15 84 {*movqi_internal}
+     (nil))
+(call_insn 48 47 49 8 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x7f8a92743f00 printf>) [0 __builtin_printf S1 A8])
+            (const_int 0 [0]))) "fact.c":15 676 {*call_value}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:SI (use (reg:SI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (nil))))))
+(code_label 49 48 50 9 3 (nil) [1 uses])
+(note 50 49 51 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 51 50 54 9 (set (reg:SI 91 [ _17 ])
+        (const_int 0 [0])) "fact.c":18 82 {*movsi_internal}
+     (nil))
+(insn 54 51 58 9 (set (reg:SI 92 [ <retval> ])
+        (reg:SI 91 [ _17 ])) 82 {*movsi_internal}
+     (nil))
+(insn 58 54 59 9 (set (reg/i:SI 0 ax)
+        (reg:SI 92 [ <retval> ])) "fact.c":19 82 {*movsi_internal}
+     (nil))
+(insn 59 58 0 9 (use (reg/i:SI 0 ax)) "fact.c":19 -1
+     (nil))

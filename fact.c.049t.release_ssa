@@ -1,0 +1,62 @@
+
+;; Function main (main, funcdef_no=0, decl_uid=2248, cgraph_uid=0, symbol_order=0)
+
+Released 0 names, 0.00%, removed 0 holes
+main ()
+{
+  long long unsigned int fact;
+  int i;
+  int n;
+  int D.2260;
+  int n.0_1;
+  long long unsigned int _2;
+  int n.1_3;
+  int n.2_4;
+  int _17;
+
+  <bb 2> [0.00%]:
+  fact_8 = 1;
+  printf ("Enter an integer: ");
+  scanf ("%d", &n);
+  n.0_1 = n;
+  if (n.0_1 < 0)
+    goto <bb 3>; [0.00%]
+  else
+    goto <bb 4>; [0.00%]
+
+  <bb 3> [0.00%]:
+  printf ("Error! Factorial of a negative number doesn\'t exist.");
+  goto <bb 8>; [0.00%]
+
+  <bb 4> [0.00%]:
+  i_12 = 1;
+  goto <bb 6>; [0.00%]
+
+  <bb 5> [0.00%]:
+  _2 = (long long unsigned int) i_5;
+  fact_14 = fact_6 * _2;
+  i_15 = i_5 + 1;
+
+  <bb 6> [0.00%]:
+  # i_5 = PHI <i_12(4), i_15(5)>
+  # fact_6 = PHI <fact_8(4), fact_14(5)>
+  n.1_3 = n;
+  if (i_5 <= n.1_3)
+    goto <bb 5>; [0.00%]
+  else
+    goto <bb 7>; [0.00%]
+
+  <bb 7> [0.00%]:
+  n.2_4 = n;
+  printf ("Factorial of %d = %llu\n", n.2_4, fact_6);
+
+  <bb 8> [0.00%]:
+  _17 = 0;
+  n ={v} {CLOBBER};
+
+<L7> [0.00%]:
+  return _17;
+
+}
+
+

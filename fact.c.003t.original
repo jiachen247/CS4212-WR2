@@ -1,0 +1,35 @@
+
+;; Function main (null)
+;; enabled by -tree-original
+
+
+{
+  int n;
+  int i;
+  long long unsigned int fact = 1;
+
+    int n;
+    int i;
+    long long unsigned int fact = 1;
+  printf ((const char * restrict) "Enter an integer: ");
+  scanf ((const char * restrict) "%d", &n);
+  if (n < 0)
+    {
+      printf ((const char * restrict) "Error! Factorial of a negative number doesn\'t exist.");
+    }
+  else
+    {
+      i = 1;
+      goto <D.2254>;
+      <D.2253>:;
+      fact = (long long unsigned int) i * fact;
+       ++i;
+      <D.2254>:;
+      if (i <= n) goto <D.2253>; else goto <D.2255>;
+      <D.2255>:;
+      printf ((const char * restrict) "Factorial of %d = %llu\n", n, fact);
+    }
+  return 0;
+}
+return 0;
+
